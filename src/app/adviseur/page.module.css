@@ -1,0 +1,492 @@
+.advisorPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 110px 0 40px 0;
+  color: white;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--color-neutral-400);
+  margin-bottom: var(--spacing-sm);
+}
+
+.breadcrumbs a {
+  color: var(--color-accent-500);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--color-neutral-300);
+}
+
+.mainContent {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.wizardCard {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) !important;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+}
+
+.stepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.4;
+  transition: opacity var(--transition-normal);
+  min-width: 70px;
+}
+
+.stepIndicator span:first-child {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-800);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.stepLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stepActive {
+  opacity: 1;
+}
+
+.stepActive span:first-child {
+  background: var(--color-accent-500);
+  color: var(--color-primary-950);
+  border-color: var(--color-accent-400);
+  box-shadow: var(--shadow-glow);
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.stepContent h2 {
+  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.stepIntro {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.optionCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.optionCard:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.03);
+  transform: translateY(-1px);
+}
+
+.optionSelected {
+  border-color: var(--color-accent-500);
+  background: rgba(245, 158, 11, 0.15) !important;
+}
+
+.subText {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Height selectors visualizer */
+.heightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.heightVisual {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: light-dark(rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0.03));
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.houseGraphic {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.houseRoof {
+  font-size: 2rem;
+}
+
+.houseFloor {
+  border-top: 1px dashed var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding-top: 4px;
+}
+
+.heightDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heightDisplay span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.heightDisplay strong {
+  font-size: 3rem;
+  color: var(--color-accent-500);
+  font-family: var(--font-heading);
+}
+
+.rangeLarge {
+  width: 100%;
+  accent-color: var(--color-accent-500);
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.stepActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-lg);
+}
+
+/* Details Toggle cards */
+.toggleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.toggleCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.toggleCard h4 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.toggleCard p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.largeCheckbox {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--color-accent-500);
+  cursor: pointer;
+}
+
+/* AI Reveal page styling */
+.aiRevealHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bigRobot {
+  font-size: 3.5rem;
+}
+
+.aiRevealHeader h2 {
+  font-size: 1.8rem;
+  font-family: var(--font-heading);
+}
+
+.aiRevealHeader p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.recommendationGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .recommendationGrid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.recommendationCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  position: relative;
+}
+
+.bestMatchCard {
+  border-color: var(--color-accent-500) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.badgeBest {
+  background: var(--color-accent-500);
+  color: var(--color-primary-950);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+}
+
+.badgeBudget {
+  background: var(--color-primary-800);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.recoDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.recoSpecs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.whyRecommended h5 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.whyRecommended ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.whyRecommended li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.recoFooter {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-md);
+  margin-top: auto;
+  width: 100%;
+}
+
+.recoPriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: var(--spacing-xs);
+}
+
+.recoPrice {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-accent-500);
+}
+
+.recoDuration {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.recoActions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.whatsappAdviceCard {
+  margin-top: var(--spacing-xxl);
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.1);
+  transition: all var(--transition-normal);
+}
+
+.whatsappAdviceCard:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.15);
+}
+
+.waBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pulsingDot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.pulsingDot::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.whatsappAdviceCard h4 {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.whatsappAdviceCard p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0;
+}
+
+.btnWhatsapp {
+  background: #25d366 !important;
+  color: white !important;
+  border: none !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3) !important;
+  transition: all var(--transition-normal) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnWhatsapp:hover {
+  background: #20ba5a !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45) !important;
+}
+
+.btnWhatsapp svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+

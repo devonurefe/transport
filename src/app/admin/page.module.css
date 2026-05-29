@@ -1,0 +1,155 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleRow h2 {
+  font-size: 1.8rem;
+  font-family: var(--font-heading);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.kpiCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.kpiTitle {
+  font-size: 0.85rem;
+  color: var(--color-neutral-400);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.kpiValue {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-accent-500);
+}
+
+.kpiTrend {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Charts styling */
+.chartCard h3, .tableCard h3 {
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-lg);
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+  padding-top: var(--spacing-xl);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.barWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 50px;
+}
+
+.bar {
+  width: 100%;
+  background: var(--color-accent-500);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  position: relative;
+  transition: height var(--transition-slow);
+}
+
+.bar:hover {
+  background: var(--color-accent-400);
+}
+
+.barTip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-primary-800);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.barLabel {
+  font-size: 0.85rem;
+  color: var(--color-neutral-400);
+}
+
+/* Responsive Table */
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.table th {
+  color: var(--color-neutral-400);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.statusLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.statusConfirmed {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--color-success);
+}
+
+.statusPending {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--color-warning);
+}
+
+.statusCompleted {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--color-info);
+}
+
+.statusCancelled {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--color-error);
+}

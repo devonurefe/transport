@@ -1,0 +1,125 @@
+.machinesPage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  font-family: var(--font-heading);
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: var(--color-neutral-400);
+}
+
+.filterBar {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) !important;
+}
+
+.tableCard {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.table th {
+  color: var(--color-neutral-400);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.statusToggle {
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.statusAvail {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--color-success);
+}
+
+.statusAvail:hover {
+  background: rgba(16, 185, 129, 0.3);
+}
+
+.statusRent {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--color-error);
+}
+
+.statusRent:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.editBtn {
+  background: transparent;
+  border: 1px solid var(--color-accent-500);
+  color: var(--color-accent-500);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background: var(--color-accent-500);
+  color: var(--color-primary-950);
+}
+
+.deleteBtn {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--color-error);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: var(--color-error);
+  color: white;
+}
