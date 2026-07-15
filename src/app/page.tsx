@@ -6,6 +6,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { CATEGORIES, MACHINES, KLUS_KITS, formatCurrency } from '@/data/machines';
 import { useLanguage } from '@/components/LanguageContext';
+import CoffeeCorner from '@/components/CoffeeCorner';
 
 export default function Home() {
   const { language, t } = useLanguage();
@@ -470,6 +471,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 8. Coffee Corner (admin-editable, above the footer) */}
+      <CoffeeCorner />
     </div>
   );
 }

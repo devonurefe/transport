@@ -17,6 +17,7 @@ export default function AdminLayout({
     { name: '🏗️ Machines', href: '/admin/machines' },
     { name: '📅 Reserveringen', href: '/admin/reservations' },
     { name: '👥 Klanten', href: '/admin/customers' },
+    { name: '☕ Coffee Corner', href: '/admin/coffee-corner' },
     { name: '⚙️ Instellingen', href: '/admin/settings' },
   ];
 
